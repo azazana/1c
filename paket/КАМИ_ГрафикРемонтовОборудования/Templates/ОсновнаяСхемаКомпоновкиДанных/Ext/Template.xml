@@ -232,24 +232,6 @@
 			</valueType>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СрокРемонта</dataPath>
-			<field>СрокРемонта</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Срок ремонта</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>0</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СрокОжидания</dataPath>
 			<field>СрокОжидания</field>
 			<title xsi:type="v8:LocalStringType">
@@ -278,12 +260,12 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>СрокРемонтаОкраска</dataPath>
-			<field>СрокРемонтаОкраска</field>
+			<dataPath>СрокРемонтаОкраскаЗапчасти</dataPath>
+			<field>СрокРемонтаОкраскаЗапчасти</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Срок ремонта окраска</v8:content>
+					<v8:content>Срок ремонта окраска запчасти</v8:content>
 				</v8:item>
 			</title>
 			<valueType>
@@ -549,6 +531,19 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличии</dataPath>
+			<field>ВНаличии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В наличии</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<objectName>ТЗДанныеДляОтчета</objectName>
 	</dataSet>
@@ -812,6 +807,26 @@
 			</v8:item>
 		</title>
 	</calculatedField>
+	<calculatedField>
+		<dataPath>СрокРемонта</dataPath>
+		<expression>(выбор когда ТипДня = "ВРаботе" тогда ДнейВСтатусе иначе 0 конец)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок ремонта</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>СрокРемонтаОкраска</dataPath>
+		<expression>Выбор когда СрокРемонтаОкраскаЗапчасти=1 или (выбор когда ТипДня = "ВРаботе" тогда ДнейВСтатусе иначе 0 конец&gt;&amp;СрокРемонта) тогда 1 иначе 2 конец</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок ремонта окраска</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
 	<totalField>
 		<dataPath>Штраф</dataPath>
 		<expression>Сумма(Штраф)</expression>
@@ -827,6 +842,22 @@
 	<totalField>
 		<dataPath>ДнейПросрочки</dataPath>
 		<expression>Сумма(ДнейПросрочки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СрокРемонта</dataPath>
+		<expression>Сумма(СрокРемонта)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаОкончанияРабот</dataPath>
+		<expression>Максимум(ДатаОкончанияРабот)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ответственный</dataPath>
+		<expression>Максимум(Ответственный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Причина</dataPath>
+		<expression>Максимум(Причина)</expression>
 	</totalField>
 	<parameter>
 		<name>ДатаОтчета</name>
@@ -890,7 +921,7 @@
 			</v8:DateQualifiers>
 		</valueType>
 		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>false</useRestriction>
+		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
 		<name>ШтрафЗаДень</name>
@@ -910,6 +941,43 @@
 		</valueType>
 		<value xsi:type="xs:decimal">100</value>
 		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СрокРемонта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок ремонта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">6</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>ГрафикРемонтаОборудования</dcsset:name>
@@ -982,9 +1050,7 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:userSettingID>ad662420-5b20-4bf6-a9cc-64de5cc00d9f</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -995,13 +1061,20 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>2023-08-01T00:00:00</v8:startDate>
-						<v8:endDate>2023-09-30T23:59:59</v8:endDate>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
-					<dcsset:userSettingID>9569b04f-1817-4cf7-ad80-3d513b4c3433</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СрокРемонта</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">7</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПериодОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>16d2d141-3e6b-4a95-9f33-039d0d456452</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:order>
@@ -1657,100 +1730,8 @@
 				<v8:Property name="ПорядокЭлементовНастроек">
 					<v8:Value xsi:type="v8:Map">
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
-							<v8:Value xsi:type="xs:decimal">2</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
-							<v8:Value xsi:type="xs:decimal">11</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
-							<v8:Value xsi:type="xs:decimal">12</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
-							<v8:Value xsi:type="xs:decimal">5</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
-							<v8:Value xsi:type="xs:decimal">4</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
-							<v8:Value xsi:type="xs:decimal">9</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
-							<v8:Value xsi:type="xs:decimal">11</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
-							<v8:Value xsi:type="xs:decimal">3</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
-							<v8:Value xsi:type="xs:decimal">8</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
-							<v8:Value xsi:type="xs:decimal">14</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
-							<v8:Value xsi:type="xs:decimal">13</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
-							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">16</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
@@ -1761,8 +1742,100 @@
 							<v8:Value xsi:type="xs:decimal">1</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
-							<v8:Value xsi:type="xs:decimal">16</v8:Value>
+							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
+							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
+							<v8:Value xsi:type="xs:decimal">14</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
+							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
+							<v8:Value xsi:type="xs:decimal">3</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
+							<v8:Value xsi:type="xs:decimal">9</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
+							<v8:Value xsi:type="xs:decimal">4</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
+							<v8:Value xsi:type="xs:decimal">5</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
+							<v8:Value xsi:type="xs:decimal">12</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 					</v8:Value>
 				</v8:Property>
@@ -1823,9 +1896,7 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardBeginningDate">
-						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:userSettingID>ad662420-5b20-4bf6-a9cc-64de5cc00d9f</dcsset:userSettingID>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
@@ -1836,11 +1907,7 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="v8:StandardPeriod">
-						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>2023-08-01T00:00:00</v8:startDate>
-						<v8:endDate>2023-09-30T23:59:59</v8:endDate>
-					</dcscor:value>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
 					<dcsset:viewMode>Normal</dcsset:viewMode>
 					<dcsset:userSettingID>9569b04f-1817-4cf7-ad80-3d513b4c3433</dcsset:userSettingID>
 				</dcscor:item>
@@ -2466,100 +2533,8 @@
 				<v8:Property name="ПорядокЭлементовНастроек">
 					<v8:Value xsi:type="v8:Map">
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
-							<v8:Value xsi:type="xs:decimal">2</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
-							<v8:Value xsi:type="xs:decimal">11</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
-							<v8:Value xsi:type="xs:decimal">12</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
-							<v8:Value xsi:type="xs:decimal">5</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
-							<v8:Value xsi:type="xs:decimal">4</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
-							<v8:Value xsi:type="xs:decimal">9</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
-							<v8:Value xsi:type="xs:decimal">11</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
-							<v8:Value xsi:type="xs:decimal">3</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
-							<v8:Value xsi:type="xs:decimal">8</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
-							<v8:Value xsi:type="xs:decimal">14</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
-							<v8:Value xsi:type="xs:decimal">13</v8:Value>
-						</v8:pair>
-						<v8:pair>
-							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
-							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">16</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
@@ -2570,8 +2545,100 @@
 							<v8:Value xsi:type="xs:decimal">1</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
-							<v8:Value xsi:type="xs:decimal">16</v8:Value>
+							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
+							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
+							<v8:Value xsi:type="xs:decimal">14</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
+							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
+							<v8:Value xsi:type="xs:decimal">3</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
+							<v8:Value xsi:type="xs:decimal">9</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
+							<v8:Value xsi:type="xs:decimal">4</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
+							<v8:Value xsi:type="xs:decimal">5</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
+							<v8:Value xsi:type="xs:decimal">12</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 					</v8:Value>
 				</v8:Property>

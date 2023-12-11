@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераВРаботе</dataPath>
+			<field>ТребуетсяВыездИнженераВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоФакт</dataPath>
+			<field>НачалоФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияРаботВРаботе</dataPath>
+			<field>ДатаОкончанияРаботВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания работ в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаРаботПланФакт</dataPath>
+			<field>ДатаНачалаРаботПланФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала работ план факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецГрафик</dataPath>
+			<field>КонецГрафик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец график</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаОтложено</dataPath>
+			<field>ДатаИзмененияСтатусаОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса отложено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерАкта</dataPath>
+			<field>НомерАкта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер акта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецФакт</dataPath>
+			<field>КонецФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиЗавершено</dataPath>
+			<field>ТребуетсяЗаказЗапчастиЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти завершено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияРаботПланФакт</dataPath>
+			<field>ДатаОкончанияРаботПланФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания работ план факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоГрафик</dataPath>
+			<field>НачалоГрафик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало график</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаДокумента</dataPath>
+			<field>ДатаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияРабот</dataPath>
+			<field>ДатаОкончанияРабот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтгрузкаПоСлужебнойЗаписке</dataPath>
+			<field>ОтгрузкаПоСлужебнойЗаписке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отгрузка по служебной записке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОформлено</dataPath>
+			<field>КоличествоОформлено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество оформлено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДокумента</dataPath>
+			<field>НомерДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаАкта</dataPath>
+			<field>ДатаАкта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата акта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиЗапланировано</dataPath>
+			<field>ТребуетсяЗаказЗапчастиЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти запланировано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Характеристика</dataPath>
+			<field>Характеристика</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераЗавершено</dataPath>
+			<field>ТребуетсяВыездИнженераЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера завершено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Назначение</dataPath>
+			<field>Назначение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВРаботе</dataPath>
+			<field>КоличествоВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельности</dataPath>
+			<field>НаправлениеДеятельности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Направление деятельности</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Причина</dataPath>
+			<field>Причина</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДокумента</dataPath>
+			<field>СтатусДокумента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗавершено</dataPath>
+			<field>КоличествоЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество завершено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаЗавершено</dataPath>
+			<field>ДатаИзмененияСтатусаЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса завершено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВключенВГрафикРемонта</dataPath>
+			<field>ВключенВГрафикРемонта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включен в график ремонта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Помещение</dataPath>
+			<field>Помещение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаЗапланировано</dataPath>
+			<field>ДатаИзмененияСтатусаЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса запланировано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаВРаботе</dataPath>
+			<field>ДатаИзмененияСтатусаВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РемонтОборудования</dataPath>
+			<field>РемонтОборудования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчасти</dataPath>
+			<field>ТребуетсяЗаказЗапчасти</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераОтложено</dataPath>
+			<field>ТребуетсяВыездИнженераОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера отложено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиОтложено</dataPath>
+			<field>ТребуетсяЗаказЗапчастиОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти отложено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиВРаботе</dataPath>
+			<field>ТребуетсяЗаказЗапчастиВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераЗапланировано</dataPath>
+			<field>ТребуетсяВыездИнженераЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера запланировано</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияРаботОтложено</dataPath>
+			<field>ДатаОкончанияРаботОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания работ отложено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВНаличии</dataPath>
+			<field>ВНаличии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>В наличии</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаНачалаГрафик КАК ДатаНачалаРаботПланФакт,
+	ВЫБОР
+		КОГДА КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаКонецГрафик = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА КОНЕЦПЕРИОДА(КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаНачалаГрафик, ДЕНЬ)
+		ИНАЧЕ КОНЕЦПЕРИОДА(КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаКонецГрафик, ДЕНЬ)
+	КОНЕЦ КАК ДатаОкончанияРаботПланФакт,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаНачалаГрафик КАК НачалоГрафик,
+	ВЫБОР
+		КОГДА КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаКонецГрафик = ДАТАВРЕМЯ(1, 1, 1)
+			ТОГДА КОНЕЦПЕРИОДА(КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаНачалаГрафик, ДЕНЬ)
+		ИНАЧЕ КОНЕЦПЕРИОДА(КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаКонецГрафик, ДЕНЬ)
+	КОНЕЦ КАК КонецГрафик,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Дата КАК ДатаРегистрации,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ОтветственныйЗаУчасток КАК Ответственный,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаНачалаФакт КАК НачалоФакт,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаКонецФакт КАК КонецФакт,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Дата КАК ДатаДокумента,
+	КАМИ_РемонтОборудованияОбороты.Номенклатура.Артикул КАК Артикул,
+	КАМИ_РемонтОборудованияОбороты.Номенклатура КАК Номенклатура,
+	КАМИ_РемонтОборудованияОбороты.Серия КАК Серия,
+	ВЫБОР
+		КОГДА КАМИ_РемонтОборудованияОбороты.Статус = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Запланировано)
+				ИЛИ КАМИ_РемонтОборудованияОбороты.Статус = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Отложено)
+			ТОГДА КАМИ_РемонтОборудованияОбороты.Количество
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоОформлено,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.НомерАкта КАК НомерАкта,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Номер КАК НомерДокумента,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ДатаАкта КАК ДатаАкта,
+	КАМИ_РемонтОборудованияОбороты.Характеристика КАК Характеристика,
+	КАМИ_РемонтОборудованияОбороты.Назначение КАК Назначение,
+	КАМИ_РемонтОборудованияОбороты.Склад КАК Склад,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Организация КАК Организация,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.НаправлениеДеятельности КАК НаправлениеДеятельности,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Причина КАК Причина,
+	ВЫБОР
+		КОГДА КАМИ_РемонтОборудованияОбороты.Статус = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.ВРаботе)
+			ТОГДА КАМИ_РемонтОборудованияОбороты.Количество
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВРаботе,
+	КАМИ_РемонтОборудованияОбороты.Статус КАК СтатусДокумента,
+	ВЫБОР
+		КОГДА КАМИ_РемонтОборудованияОбороты.Статус = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Завершено)
+			ТОГДА КАМИ_РемонтОборудованияОбороты.Количество
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоЗавершено,
+	КАМИ_РемонтОборудованияОбороты.Регистратор КАК Регистратор,
+	ВЫРАЗИТЬ(КАМИ_РемонтОборудованияОбороты.Регистратор.Описание КАК СТРОКА(200)) КАК Описание,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ОтгрузкаПоСлужебнойЗаписке КАК ОтгрузкаПоСлужебнойЗаписке,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.ВключенВГрафикРемонта КАК ВключенВГрафикРемонта,
+	КАМИ_СтатусыРемонтаСрезПоследнихЗапланировано.Период КАК ДатаИзмененияСтатусаЗапланировано,
+	КАМИ_СтатусыРемонтаЗавершено.Период КАК ДатаИзмененияСтатусаЗавершено,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.Период КАК ДатаИзмененияСтатусаВРаботе,
+	КАМИ_СтатусыРемонтаОтложено.ТребуетсяЗаказЗапчасти КАК ТребуетсяЗаказЗапчасти,
+	КАМИ_СтатусыРемонтаОтложено.Период КАК ДатаИзмененияСтатусаОтложено,
+	КАМИ_СтатусыРемонтаЗавершено.ТребуетсяВыездИнженера КАК ТребуетсяВыездИнженераЗавершено,
+	КАМИ_СтатусыРемонтаЗавершено.ТребуетсяЗаказЗапчасти КАК ТребуетсяЗаказЗапчастиЗавершено,
+	КАМИ_СтатусыРемонтаОтложено.ТребуетсяВыездИнженера КАК ТребуетсяВыездИнженераОтложено,
+	КАМИ_СтатусыРемонтаОтложено.ТребуетсяЗаказЗапчасти КАК ТребуетсяЗаказЗапчастиОтложено,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ТребуетсяВыездИнженера КАК ТребуетсяВыездИнженераВРаботе,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ТребуетсяЗаказЗапчасти КАК ТребуетсяЗаказЗапчастиВРаботе,
+	КАМИ_СтатусыРемонтаСрезПоследнихЗапланировано.ТребуетсяВыездИнженера КАК ТребуетсяВыездИнженераЗапланировано,
+	КАМИ_СтатусыРемонтаСрезПоследнихЗапланировано.ТребуетсяЗаказЗапчасти КАК ТребуетсяЗаказЗапчастиЗапланировано,
+	КАМИ_РемонтОборудованияОбороты.Регистратор.Приоритет КАК Приоритет,
+	КАМИ_СтатусыРемонтаТекущийСрез.ДатаОкончанияРабот КАК ДатаОкончанияРабот,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ДатаОкончанияРабот КАК ДатаОкончанияРаботВРаботе,
+	КАМИ_СтатусыРемонтаОтложено.ДатаОкончанияРабот КАК ДатаОкончанияРаботОтложено,
+	ЕСТЬNULL(ТоварыНаСкладахОстатки.ВНаличииОстаток, 0) + ЕСТЬNULL(ТоварыНаСкладахОстатки.КОтгрузкеОстаток, 0) &gt; 0 КАК ВНаличии
+ИЗ
+	РегистрСведений.КАМИ_РемонтОборудованияРС КАК КАМИ_РемонтОборудованияОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних({(&amp;ДатаОтчета)}, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Запланировано)) КАК КАМИ_СтатусыРемонтаСрезПоследнихЗапланировано
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаСрезПоследнихЗапланировано.РемонтОборудования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних({(&amp;ДатаОтчета)}, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Вработе)) КАК КАМИ_СтатусыРемонтаСрезПоследнихВРаботе
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.РемонтОборудования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних({(&amp;ДатаОтчета)}, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Завершено)) КАК КАМИ_СтатусыРемонтаЗавершено
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаЗавершено.РемонтОборудования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних({(&amp;ДатаОтчета)}, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.отложено)) КАК КАМИ_СтатусыРемонтаОтложено
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаОтложено.РемонтОборудования
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних({(&amp;ДатаОтчета)}, ) КАК КАМИ_СтатусыРемонтаТекущийСрез
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаТекущийСрез.РемонтОборудования
+			И КАМИ_РемонтОборудованияОбороты.Регистратор.Статус = КАМИ_СтатусыРемонтаТекущийСрез.СтатусДокумента
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыНаСкладах.Остатки({(&amp;ДатаОтчета)}, ) КАК ТоварыНаСкладахОстатки
+		ПО КАМИ_РемонтОборудованияОбороты.Характеристика = ТоварыНаСкладахОстатки.Характеристика
+			И КАМИ_РемонтОборудованияОбороты.Номенклатура = ТоварыНаСкладахОстатки.Номенклатура
+			И КАМИ_РемонтОборудованияОбороты.Серия = ТоварыНаСкладахОстатки.Серия
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;УстановленПериод
+					И КАМИ_РемонтОборудованияОбороты.Регистратор.Статус = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Завершено)
+				ТОГДА КАМИ_СтатусыРемонтаЗавершено.Период МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>УстановленПериод</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Установлен период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Артикул</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВключенВГрафикРемонта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВНаличии</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаАкта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИзмененияСтатусаВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИзмененияСтатусаЗавершено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИзмененияСтатусаЗапланировано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаИзмененияСтатусаОтложено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачалаРаботПланФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияРабот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияРаботВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияРаботОтложено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияРаботПланФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРегистрации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗавершено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоОформлено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонецГрафик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КонецФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Назначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НаправлениеДеятельности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачалоГрафик</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НачалоФакт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерАкта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Описание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтгрузкаПоСлужебнойЗаписке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Приоритет</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Причина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Серия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Склад</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяВыездИнженераВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяВыездИнженераЗавершено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяВыездИнженераЗапланировано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяВыездИнженераОтложено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяЗаказЗапчасти</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяЗаказЗапчастиВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяЗаказЗапчастиЗавершено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяЗаказЗапчастиЗапланировано</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТребуетсяЗаказЗапчастиОтложено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Характеристика</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
