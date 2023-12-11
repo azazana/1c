@@ -1,0 +1,2599 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetObject">
+		<name>ТЗДанныеДляОтчета</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер документа</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<presentationExpression>НомерДокумента</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПроцентОплатыЧисло</dataPath>
+			<field>ПроцентОплатыЧисло</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процент оплаты</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоГрафик</dataPath>
+			<field>НачалоГрафик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало график</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецГрафик</dataPath>
+			<field>КонецГрафик</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец график</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оборудование</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">150</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НачалоФакт</dataPath>
+			<field>НачалоФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начало факт</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонецФакт</dataPath>
+			<field>КонецФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конец факт</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Длительность</dataPath>
+			<field>Длительность</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДокумента</dataPath>
+			<field>СтатусДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьПростоя</dataPath>
+			<field>ДлительностьПростоя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительность простоя</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДокумента</dataPath>
+			<field>НомерДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер документа</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокРемонта</dataPath>
+			<field>СрокРемонта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок ремонта</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокОжидания</dataPath>
+			<field>СрокОжидания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок ожидания</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Причина</dataPath>
+			<field>Причина</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причина</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокРемонтаОкраска</dataPath>
+			<field>СрокРемонтаОкраска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок ремонта окраска</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокОжиданияОкраска</dataPath>
+			<field>СрокОжиданияОкраска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Срок ожидания окраска</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаНачалаРаботы</dataPath>
+			<field>ДатаНачалаРаботы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала работы</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаЗапланировано</dataPath>
+			<field>ДатаИзмененияСтатусаЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса запланировано</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаВРаботе</dataPath>
+			<field>ДатаИзмененияСтатусаВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса в работе</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаИзмененияСтатусаЗавершено</dataPath>
+			<field>ДатаИзмененияСтатусаЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата изменения статуса завершено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказКлиента</dataPath>
+			<field>ЗаказКлиента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер счета</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>ЗаказКлиента.Номер</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераЗавершено</dataPath>
+			<field>ТребуетсяВыездИнженераЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера завершено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиЗавершено</dataPath>
+			<field>ТребуетсяЗаказЗапчастиЗавершено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти завершено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераОтложено</dataPath>
+			<field>ТребуетсяВыездИнженераОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера отложено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиОтложено</dataPath>
+			<field>ТребуетсяЗаказЗапчастиОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти отложено</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераВРаботе</dataPath>
+			<field>ТребуетсяВыездИнженераВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера в работе</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиВРаботе</dataPath>
+			<field>ТребуетсяЗаказЗапчастиВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти в работе</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяВыездИнженераЗапланировано</dataPath>
+			<field>ТребуетсяВыездИнженераЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется выезд инженера запланировано</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяЗаказЗапчастиЗапланировано</dataPath>
+			<field>ТребуетсяЗаказЗапчастиЗапланировано</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется заказ запчасти запланировано</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:boolean</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Серия</dataPath>
+			<field>Серия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Приоритет</dataPath>
+			<field>Приоритет</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончанияРабот</dataPath>
+			<field>ДатаОкончанияРабот</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания работ</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</valueType>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<objectName>ТЗДанныеДляОтчета</objectName>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоИзмененийДатыОкончания</dataPath>
+			<field>КоличествоИзмененийДатыОкончания</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество изменений даты окончания</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистратор</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КАМИ_СтатусыРемонта.РемонтОборудования КАК Регистратор,
+	КОЛИЧЕСТВО(КАМИ_СтатусыРемонта.ДатаОкончанияРабот) КАК КоличествоИзмененийДатыОкончания
+ИЗ
+	РегистрСведений.КАМИ_СтатусыРемонта КАК КАМИ_СтатусыРемонта
+ГДЕ
+	НЕ КАМИ_СтатусыРемонта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
+	И НЕ(КАМИ_СтатусыРемонта.СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Отложено)
+				И НАЧАЛОПЕРИОДА(КАМИ_СтатусыРемонта.ДатаОкончанияРабот, ДЕНЬ) = НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(КАМИ_СтатусыРемонта.Период, ДЕНЬ, 20), ДЕНЬ))
+	И НЕ(КАМИ_СтатусыРемонта.СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.ВРаботе)
+				И НАЧАЛОПЕРИОДА(КАМИ_СтатусыРемонта.ДатаОкончанияРабот, ДЕНЬ) = НАЧАЛОПЕРИОДА(ДОБАВИТЬКДАТЕ(КАМИ_СтатусыРемонта.Период, ДЕНЬ, 9), ДЕНЬ))
+	И КАМИ_СтатусыРемонта.РемонтОборудования В(&amp;Регистратор)
+
+СГРУППИРОВАТЬ ПО
+	КАМИ_СтатусыРемонта.РемонтОборудования</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Штрафы</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РемонтОборудования</dataPath>
+			<field>РемонтОборудования</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДнейПросрочкиВРаботе</dataPath>
+			<field>ДнейПросрочкиВРаботе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней просрочки в работе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусДокумента</dataPath>
+			<field>СтатусДокумента</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДнейВСтатусе</dataPath>
+			<field>ДнейВСтатусе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней в статусе</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДнейПросрочкиОтложено</dataPath>
+			<field>ДнейПросрочкиОтложено</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней просрочки отложено</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДнейПросрочки</dataPath>
+			<field>ДнейПросрочки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней просрочки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипДня</dataPath>
+			<field>ТипДня</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип дня</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КАМИ_РемонтОборудованияОбороты.Регистратор КАК Регистратор,
+	КАМИ_СтатусыРемонтаОтложено.ДатаОкончанияРабот КАК ДатаОкончанияРабот,
+	МАКСИМУМ("Отложено") КАК ТипДня,
+	МИНИМУМ(КАМИ_СтатусыРемонтаОснОтложено.Период) КАК ПериодПредыдущегоСтатуса
+ПОМЕСТИТЬ ДиаграммаГанта
+ИЗ
+	РегистрСведений.КАМИ_РемонтОборудованияРС КАК КАМИ_РемонтОборудованияОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних(, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.отложено)) КАК КАМИ_СтатусыРемонтаОтложено
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаОтложено.РемонтОборудования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта КАК КАМИ_СтатусыРемонтаОснОтложено
+		ПО (КАМИ_СтатусыРемонтаОтложено.РемонтОборудования = КАМИ_СтатусыРемонтаОснОтложено.РемонтОборудования)
+			И (КАМИ_СтатусыРемонтаОтложено.Период &lt; КАМИ_СтатусыРемонтаОснОтложено.Период)
+ГДЕ
+	КАМИ_РемонтОборудованияОбороты.Регистратор В(&amp;Регистратор)
+
+СГРУППИРОВАТЬ ПО
+	КАМИ_РемонтОборудованияОбороты.Регистратор,
+	КАМИ_СтатусыРемонтаОтложено.ДатаОкончанияРабот
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КАМИ_РемонтОборудованияОбороты.Регистратор,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ДатаОкончанияРабот,
+	МАКСИМУМ("ВРаботе"),
+	МИНИМУМ(КАМИ_СтатусыРемонтаОснВРаботе.Период)
+ИЗ
+	РегистрСведений.КАМИ_РемонтОборудованияРС КАК КАМИ_РемонтОборудованияОбороты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних(, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Вработе)) КАК КАМИ_СтатусыРемонтаСрезПоследнихВРаботе
+		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.РемонтОборудования
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта КАК КАМИ_СтатусыРемонтаОснВРаботе
+		ПО (КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.РемонтОборудования = КАМИ_СтатусыРемонтаОснВРаботе.РемонтОборудования)
+			И (КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.Период &lt; КАМИ_СтатусыРемонтаОснВРаботе.Период)
+ГДЕ
+	КАМИ_РемонтОборудованияОбороты.Регистратор В(&amp;Регистратор)
+
+СГРУППИРОВАТЬ ПО
+	КАМИ_РемонтОборудованияОбороты.Регистратор,
+	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ДатаОкончанияРабот
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВЫБОР
+			КОГДА ДиаграммаГанта.ТипДня = "Отложено"
+					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА 0
+			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
+						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+							ТОГДА &amp;ДатаСеанса
+						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+					КОНЕЦ, ДЕНЬ) &gt; 0
+				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
+							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+								ТОГДА &amp;ДатаСеанса
+							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+						КОНЕЦ, ДЕНЬ)
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ДнейПросрочкиВРаботе,
+	СУММА(ВЫБОР
+			КОГДА ДиаграммаГанта.ТипДня = "ВРаботе"
+					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА 0
+			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
+						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+							ТОГДА &amp;ДатаСеанса
+						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+					КОНЕЦ, ДЕНЬ) &gt; 0
+				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
+							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+								ТОГДА &amp;ДатаСеанса
+							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+						КОНЕЦ, ДЕНЬ)
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ДнейПросрочкиОтложено,
+	СУММА(ВЫБОР
+			КОГДА ДиаграммаГанта.ТипДня = "Отложено"
+					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА 0
+			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
+						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+							ТОГДА &amp;ДатаСеанса
+						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+					КОНЕЦ, ДЕНЬ) &gt; 0
+				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
+							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+								ТОГДА &amp;ДатаСеанса
+							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+						КОНЕЦ, ДЕНЬ)
+			ИНАЧЕ 0
+		КОНЕЦ) + СУММА(ВЫБОР
+			КОГДА ДиаграммаГанта.ТипДня = "ВРаботе"
+					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
+				ТОГДА 0
+			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
+						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+							ТОГДА &amp;ДатаСеанса
+						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+					КОНЕЦ, ДЕНЬ) &gt; 0
+				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
+							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
+								ТОГДА &amp;ДатаСеанса
+							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
+						КОНЕЦ, ДЕНЬ)
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ДнейПросрочки,
+	0 КАК ДнейВСтатусе,
+	ДиаграммаГанта.ТипДня КАК ТипДня,
+	ДиаграммаГанта.Регистратор КАК Регистратор
+ИЗ
+	ДиаграммаГанта КАК ДиаграммаГанта
+
+СГРУППИРОВАТЬ ПО
+	ДиаграммаГанта.Регистратор,
+	ДиаграммаГанта.ТипДня</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>ТЗДанныеДляОтчета</sourceDataSet>
+		<destinationDataSet>НаборДанных1</destinationDataSet>
+		<sourceExpression>Регистратор</sourceExpression>
+		<destinationExpression>Регистратор</destinationExpression>
+		<parameter>Регистратор</parameter>
+		<parameterListAllowed>true</parameterListAllowed>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>ТЗДанныеДляОтчета</sourceDataSet>
+		<destinationDataSet>Штрафы</destinationDataSet>
+		<sourceExpression>Регистратор</sourceExpression>
+		<destinationExpression>Регистратор</destinationExpression>
+		<parameter>Регистратор</parameter>
+		<parameterListAllowed>true</parameterListAllowed>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>ДатаРегистрации9Дней</dataPath>
+		<expression>Формат(ДобавитьКДате(ДатаРегистрации,"День",9),"ДЛФ=Д")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата регистрации + 9 дней</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Штраф</dataPath>
+		<expression>ДнейПросрочки*&amp;ШтрафЗаДень</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Штраф</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>Штраф</dataPath>
+		<expression>Сумма(Штраф)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДнейПросрочкиВРаботе</dataPath>
+		<expression>Сумма(ДнейПросрочкиВРаботе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДнейПросрочкиОтложено</dataPath>
+		<expression>Сумма(ДнейПросрочкиОтложено)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДнейПросрочки</dataPath>
+		<expression>Сумма(ДнейПросрочки)</expression>
+	</totalField>
+	<parameter>
+		<name>ДатаОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаСеанса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата сеанса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
+	</parameter>
+	<parameter>
+		<name>Регистратор</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Регистратор</v8:content>
+			</v8:item>
+		</title>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ШтрафЗаДень</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Штраф за день</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">100</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>ГрафикРемонтаОборудования</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>График ремонта оборудования</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Серия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаказКлиента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаРегистрации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокОжидания</dcsset:field>
+					<dcsset:title>Срок ожидания (в днях)</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокРемонта</dcsset:field>
+					<dcsset:title>Срок ремонта (в днях)</dcsset:title>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончанияРабот</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Причина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Штраф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочкиВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочкиОтложено</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочки</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>ad662420-5b20-4bf6-a9cc-64de5cc00d9f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Регистратор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2023-08-01T00:00:00</v8:startDate>
+						<v8:endDate>2023-09-30T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9569b04f-1817-4cf7-ad80-3d513b4c3433</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СтатусДокумента</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СрокРемонта</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СрокОжидания</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СрокОжиданияОкраска</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СрокРемонтаОкраска</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СрокОжиданияОкраска</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:FieldSelectionBackColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Превышен срок ожидания ремонта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Фон выделения редактирования, Горизонтальное положение: Центрировать (Поля: Срок ожидания, Дата регистрации; Условие: Срок ожидания окраска = 1)</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>2505edd4-667a-436a-8113-744443fbea80</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок ожидания ремонта больше 365 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СрокРемонтаОкраска</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9A9A9A</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Превышен срок ремонта</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок ремонта больше 6 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПроцентОплатыЧисло</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Станок оплачен</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Станок оплачен</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СрокРемонтаОкраска</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Завершено</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершено в срок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Цвет акцентирования (Поля: Срок ремонта, Дата начала работы; Условие: Группа И(Срок ремонта окраска &lt;&gt; 1, Статус = Завершено))</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e686039d-f4ea-43bc-8b0e-882a0c66f32a</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершено в срок меньше 6 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КонецГрафик</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Длительность</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДлительностьПростоя</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КонецФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НачалоГрафик</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НачалоФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НомерДокумента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Организация</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Склад</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжиданияОкраска</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонтаОкраска</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Горизонтальное положение: Центрировать, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Конец график, Дата начала работы, Дата регистрации, Длительность, Длительность простоя, Конец факт, Начало график, Начало факт, Номер документа, Номер документа, Организация, Процент оплаты, Склад, Срок ожидания, Срок ожидания окраска, Срок ремонта, Срок ремонта окраска)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c65c2f26-a7af-4655-b354-674c410e2187</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Горизонтальное положение: Центрировать, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Срок ремонта, Срок ожидания)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7bbe4646-26c1-40a5-abfc-b84ad186c4c6</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, Горизонтальное положение: Прижать влево, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Статус)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>80cd29d5-040a-479c-baf2-c8d88aaa0d05</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Причина</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Ответственный</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Минимальная ширина: 35, Максимальная ширина: 35 (Поля: Причина, Ответственный)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>750d5371-02de-4dbd-be18-19c4742ef035</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, 11, Горизонтальное положение: Центрировать, Вертикальное положение: Центрировать (Все поля)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>f09ee062-f7d7-4675-a3c9-88e1ccef4109</dcsset:userSettingID>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, Горизонтальное положение: Прижать влево, Минимальная ширина: 35, Максимальная ширина: 35, Минимальная высота: 0, Максимальная высота: 0 (Поля: Оборудование)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>542407aa-25fd-4cfe-97d1-672336f7ef7e</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Запланировано</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">В ожидании</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Текст: В ожидании (Поля: Статус; Условие: Статус = Запланировано (В ожидании))</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a404d6a7-0dfc-4d18-b544-a87a432099cd</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Отложено</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТребуетсяЗаказЗапчастиОтложено</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуется заказ запчасти</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Рамка (Поля: Срок ремонта, Дата начала работы; Условие: Статус = Отложено, Требуется заказ запчасти отложено = Да)</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7e7286ad-b2db-46e0-aa45-8e6514bc780c</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуется заказ запчасти</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаОкончанияРабот</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КоличествоИзмененийДатыОкончания</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Дата окончания изменена вручную</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Поле изменено вручную</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">График ремонта</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтатусДокумента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:additionalProperties>
+				<v8:Property name="СтандартныеСвойстваПредопределенныхПараметровВывода">
+					<v8:Value xsi:type="v8:Array">
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLE</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">false</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="xs:string">График ремонта</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLEOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">DATAPARAMETERSOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">FILTEROUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+					</v8:Value>
+				</v8:Property>
+				<v8:Property name="ПараметрыПодбора">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+				<v8:Property name="РасширенноеОписаниеТипов">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+				<v8:Property name="ПорядокЭлементовНастроек">
+					<v8:Value xsi:type="v8:Map">
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
+							<v8:Value xsi:type="xs:decimal">12</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
+							<v8:Value xsi:type="xs:decimal">5</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
+							<v8:Value xsi:type="xs:decimal">4</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
+							<v8:Value xsi:type="xs:decimal">9</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
+							<v8:Value xsi:type="xs:decimal">3</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
+							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
+							<v8:Value xsi:type="xs:decimal">14</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
+							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">9569b04f-1817-4cf7-ad80-3d513b4c3433</v8:Key>
+							<v8:Value xsi:type="xs:decimal">1</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">16</v8:Value>
+						</v8:pair>
+					</v8:Value>
+				</v8:Property>
+				<v8:Property name="НастройкиКолонтитулов">
+					<v8:Value xsi:nil="true"/>
+				</v8:Property>
+				<v8:Property name="КлючВарианта">
+					<v8:Value xsi:type="xs:string">73ce3fb2-dc5b-4bc1-b8d6-064e5d07996a</v8:Value>
+				</v8:Property>
+				<v8:Property name="ВариантНаименование">
+					<v8:Value xsi:type="xs:string">График ремонта</v8:Value>
+				</v8:Property>
+				<v8:Property name="КлючПредопределенногоВарианта">
+					<v8:Value xsi:nil="true"/>
+				</v8:Property>
+				<v8:Property name="КонтекстВарианта">
+					<v8:Value xsi:type="xs:string"/>
+				</v8:Property>
+				<v8:Property name="ФормаПараметрыОтбор">
+					<v8:Value xsi:type="v8:Structure"/>
+				</v8:Property>
+			</dcsset:additionalProperties>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>РасшифровкаШтрафа</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расшифровка штрафа</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Серия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Штраф</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочкиВРаботе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДнейПросрочкиОтложено</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>ad662420-5b20-4bf6-a9cc-64de5cc00d9f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Регистратор</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>2023-08-01T00:00:00</v8:startDate>
+						<v8:endDate>2023-09-30T23:59:59</v8:endDate>
+					</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>9569b04f-1817-4cf7-ad80-3d513b4c3433</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СрокОжиданияОкраска</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:FieldSelectionBackColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Превышен срок ожидания ремонта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Фон выделения редактирования, Горизонтальное положение: Центрировать (Поля: Срок ожидания, Дата регистрации; Условие: Срок ожидания окраска = 1)</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>2505edd4-667a-436a-8113-744443fbea80</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок ожидания ремонта больше 365 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СрокРемонтаОкраска</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9A9A9A</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Превышен срок ремонта</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок ремонта больше 6 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ПроцентОплатыЧисло</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Станок оплачен</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Станок оплачен</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СрокРемонтаОкраска</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Завершено</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:AccentColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершено в срок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Цвет акцентирования (Поля: Срок ремонта, Дата начала работы; Условие: Группа И(Срок ремонта окраска &lt;&gt; 1, Статус = Завершено))</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>e686039d-f4ea-43bc-8b0e-882a0c66f32a</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершено в срок меньше 6 дней</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КонецГрафик</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаРегистрации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Длительность</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДлительностьПростоя</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КонецФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НачалоГрафик</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НачалоФакт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>НомерДокумента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Регистратор</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Организация</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ПроцентОплатыЧисло</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Склад</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжиданияОкраска</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокРемонтаОкраска</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Горизонтальное положение: Центрировать, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Конец график, Дата начала работы, Дата регистрации, Длительность, Длительность простоя, Конец факт, Начало график, Начало факт, Номер документа, Номер документа, Организация, Процент оплаты, Склад, Срок ожидания, Срок ожидания окраска, Срок ремонта, Срок ремонта окраска)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>c65c2f26-a7af-4655-b354-674c410e2187</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СрокОжидания</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Горизонтальное положение: Центрировать, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Срок ремонта, Срок ожидания)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7bbe4646-26c1-40a5-abfc-b84ad186c4c6</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, Горизонтальное положение: Прижать влево, Минимальная ширина: 15, Максимальная ширина: 15 (Поля: Статус)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>80cd29d5-040a-479c-baf2-c8d88aaa0d05</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Причина</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Ответственный</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Минимальная ширина: 35, Максимальная ширина: 35 (Поля: Причина, Ответственный)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>750d5371-02de-4dbd-be18-19c4742ef035</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="11" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, 11, Горизонтальное положение: Центрировать, Вертикальное положение: Центрировать (Все поля)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>f09ee062-f7d7-4675-a3c9-88e1ccef4109</dcsset:userSettingID>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Номенклатура</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МинимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>МаксимальнаяВысота</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">0</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Шрифт: Шрифт диалогов и меню, Горизонтальное положение: Прижать влево, Минимальная ширина: 35, Максимальная ширина: 35, Минимальная высота: 0, Максимальная высота: 0 (Поля: Оборудование)</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>542407aa-25fd-4cfe-97d1-672336f7ef7e</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string"/>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+					<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+					<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+					<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+					<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					<dcsset:useInResourceFieldsHeader>DontUse</dcsset:useInResourceFieldsHeader>
+					<dcsset:useInOverallHeader>DontUse</dcsset:useInOverallHeader>
+					<dcsset:useInOverallResourceFieldsHeader>DontUse</dcsset:useInOverallResourceFieldsHeader>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СтатусДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Запланировано</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="xs:string">В ожидании</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Текст: В ожидании (Поля: Статус; Условие: Статус = Запланировано (В ожидании))</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>a404d6a7-0dfc-4d18-b544-a87a432099cd</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СрокРемонта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаНачалаРаботы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СтатусДокумента</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.КАМИ_СтатусыСервисныхРабот.Отложено</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТребуетсяЗаказЗапчастиОтложено</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:BorderColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуется заказ запчасти</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Цвет фона: Рамка (Поля: Срок ремонта, Дата начала работы; Условие: Статус = Отложено, Требуется заказ запчасти отложено = Да)</v8:content>
+						</v8:item>
+					</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>7e7286ad-b2db-46e0-aa45-8e6514bc780c</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Требуется заказ запчасти</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ДатаОкончанияРабот</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">КоличествоИзмененийДатыОкончания</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+					<dcsset:presentation xsi:type="xs:string">Дата окончания изменена вручную</dcsset:presentation>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+					<dcsset:userSettingID>fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="xs:string">Поле изменено вручную</dcsset:userSettingPresentation>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">График ремонта</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Normal</dcsset:viewMode>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>СтатусДокумента</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+			<dcsset:additionalProperties>
+				<v8:Property name="СтандартныеСвойстваПредопределенныхПараметровВывода">
+					<v8:Value xsi:type="v8:Array">
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLE</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">false</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="xs:string">График ремонта</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">TITLEOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">DATAPARAMETERSOUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+						<v8:Value xsi:type="v8:Structure">
+							<v8:Property name="Идентификатор">
+								<v8:Value xsi:type="xs:string">FILTEROUTPUT</v8:Value>
+							</v8:Property>
+							<v8:Property name="Использование">
+								<v8:Value xsi:type="xs:boolean">true</v8:Value>
+							</v8:Property>
+							<v8:Property name="Значение">
+								<v8:Value xsi:type="dcsset:DataCompositionTextOutputType">Auto</v8:Value>
+							</v8:Property>
+						</v8:Value>
+					</v8:Value>
+				</v8:Property>
+				<v8:Property name="ПараметрыПодбора">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+				<v8:Property name="РасширенноеОписаниеТипов">
+					<v8:Value xsi:type="v8:Map"/>
+				</v8:Property>
+				<v8:Property name="ПорядокЭлементовНастроек">
+					<v8:Value xsi:type="v8:Map">
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">830b4066-7795-4c93-9e35-f294f5f27c91</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">753ca61a-b8f8-4c5b-97c8-9248f9119c70</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">d85ec83b-4516-44d6-8922-182a0e74df68</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">818fb372-f915-4504-825f-42592bd0cb0e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e9b4f20-3826-4104-a3cd-033101975e19</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">750d5371-02de-4dbd-be18-19c4742ef035</v8:Key>
+							<v8:Value xsi:type="xs:decimal">12</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">583a9e72-9792-4fd6-ae7e-dd8820db719c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">10550a2b-6e91-4431-a44d-74f2869c01d2</v8:Key>
+							<v8:Value xsi:type="xs:decimal">5</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">db309615-38f0-4709-a949-a59d7405ea72</v8:Key>
+							<v8:Value xsi:type="xs:decimal">4</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c65c2f26-a7af-4655-b354-674c410e2187</v8:Key>
+							<v8:Value xsi:type="xs:decimal">9</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">80cd29d5-040a-479c-baf2-c8d88aaa0d05</v8:Key>
+							<v8:Value xsi:type="xs:decimal">11</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
+							<v8:Value xsi:type="xs:decimal">3</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
+							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">c6d57b3a-21f2-4d83-9fab-f3f875af10ee</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
+							<v8:Value xsi:type="xs:decimal">14</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
+							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
+							<v8:Value xsi:type="xs:decimal">15</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">9569b04f-1817-4cf7-ad80-3d513b4c3433</v8:Key>
+							<v8:Value xsi:type="xs:decimal">1</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7e7286ad-b2db-46e0-aa45-8e6514bc780c</v8:Key>
+							<v8:Value xsi:type="xs:decimal">16</v8:Value>
+						</v8:pair>
+					</v8:Value>
+				</v8:Property>
+				<v8:Property name="НастройкиКолонтитулов">
+					<v8:Value xsi:nil="true"/>
+				</v8:Property>
+				<v8:Property name="КлючВарианта">
+					<v8:Value xsi:type="xs:string">73ce3fb2-dc5b-4bc1-b8d6-064e5d07996a</v8:Value>
+				</v8:Property>
+				<v8:Property name="ВариантНаименование">
+					<v8:Value xsi:type="xs:string">График ремонта</v8:Value>
+				</v8:Property>
+				<v8:Property name="КлючПредопределенногоВарианта">
+					<v8:Value xsi:nil="true"/>
+				</v8:Property>
+				<v8:Property name="КонтекстВарианта">
+					<v8:Value xsi:type="xs:string"/>
+				</v8:Property>
+				<v8:Property name="ФормаПараметрыОтбор">
+					<v8:Value xsi:type="v8:Structure"/>
+				</v8:Property>
+			</dcsset:additionalProperties>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
