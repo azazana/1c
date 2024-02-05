@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
-	<ExternalReport uuid="53328b60-58a9-413c-805f-506f6c2d064d">
+	<ExternalReport uuid="fa1af923-16e3-41e5-97f3-23a5649928f6">
 		<InternalInfo>
 			<xr:ContainedObject>
 				<xr:ClassId>e41aff26-25cf-4bb6-b6c1-3f478a75f374</xr:ClassId>
-				<xr:ObjectId>b0235381-26e9-4f70-abc7-2089d1a1ff2f</xr:ObjectId>
+				<xr:ObjectId>21f9a77e-e190-4548-a1aa-80b0c595d04c</xr:ObjectId>
 			</xr:ContainedObject>
 			<xr:GeneratedType name="ExternalReportObject.КАМИ_ГрафикРемонтовОборудования" category="Object">
-				<xr:TypeId>aa52e48e-881f-410e-a4ce-550a9a63b7fc</xr:TypeId>
-				<xr:ValueId>49ac96d8-0ebb-45ec-864f-90a5b0c74afa</xr:ValueId>
+				<xr:TypeId>ffba98fc-25a2-4b19-92a2-563052a1314e</xr:TypeId>
+				<xr:ValueId>b1651ff2-6136-46d2-998a-de3534e93684</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
