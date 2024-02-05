@@ -381,110 +381,6 @@
 			<presentationExpression>ЗаказКлиента.Номер</presentationExpression>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяВыездИнженераЗавершено</dataPath>
-			<field>ТребуетсяВыездИнженераЗавершено</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется выезд инженера завершено</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяЗаказЗапчастиЗавершено</dataPath>
-			<field>ТребуетсяЗаказЗапчастиЗавершено</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется заказ запчасти завершено</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяВыездИнженераОтложено</dataPath>
-			<field>ТребуетсяВыездИнженераОтложено</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется выезд инженера отложено</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяЗаказЗапчастиОтложено</dataPath>
-			<field>ТребуетсяЗаказЗапчастиОтложено</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется заказ запчасти отложено</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяВыездИнженераВРаботе</dataPath>
-			<field>ТребуетсяВыездИнженераВРаботе</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется выезд инженера в работе</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяЗаказЗапчастиВРаботе</dataPath>
-			<field>ТребуетсяЗаказЗапчастиВРаботе</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется заказ запчасти в работе</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяВыездИнженераЗапланировано</dataPath>
-			<field>ТребуетсяВыездИнженераЗапланировано</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется выезд инженера запланировано</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ТребуетсяЗаказЗапчастиЗапланировано</dataPath>
-			<field>ТребуетсяЗаказЗапчастиЗапланировано</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Требуется заказ запчасти запланировано</v8:content>
-				</v8:item>
-			</title>
-			<valueType>
-				<v8:Type>xs:boolean</v8:Type>
-			</valueType>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Серия</dataPath>
 			<field>Серия</field>
 			<title xsi:type="v8:LocalStringType">
@@ -592,28 +488,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>Штрафы</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>РемонтОборудования</dataPath>
-			<field>РемонтОборудования</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>ДнейПросрочкиВРаботе</dataPath>
-			<field>ДнейПросрочкиВРаботе</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дней просрочки в работе</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СтатусДокумента</dataPath>
-			<field>СтатусДокумента</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Регистратор</dataPath>
-			<field>Регистратор</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ДнейВСтатусе</dataPath>
 			<field>ДнейВСтатусе</field>
 			<title xsi:type="v8:LocalStringType">
@@ -624,12 +498,12 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ДнейПросрочкиОтложено</dataPath>
-			<field>ДнейПросрочкиОтложено</field>
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Дней просрочки отложено</v8:content>
+					<v8:content>Регистратор</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -644,6 +518,16 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
+			<dataPath>Штраф</dataPath>
+			<field>Штраф</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штраф</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
 			<dataPath>ТипДня</dataPath>
 			<field>ТипДня</field>
 			<title xsi:type="v8:LocalStringType">
@@ -653,123 +537,53 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период1</dataPath>
+			<field>Период1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период1</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	КАМИ_РемонтОборудованияОбороты.Регистратор КАК Регистратор,
-	КАМИ_СтатусыРемонтаОтложено.ДатаОкончанияРабот КАК ДатаОкончанияРабот,
-	МАКСИМУМ("Отложено") КАК ТипДня,
-	МИНИМУМ(КАМИ_СтатусыРемонтаОснОтложено.Период) КАК ПериодПредыдущегоСтатуса
-ПОМЕСТИТЬ ДиаграммаГанта
-ИЗ
-	РегистрСведений.КАМИ_РемонтОборудованияРС КАК КАМИ_РемонтОборудованияОбороты
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних(, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.отложено)) КАК КАМИ_СтатусыРемонтаОтложено
-		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаОтложено.РемонтОборудования
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта КАК КАМИ_СтатусыРемонтаОснОтложено
-		ПО (КАМИ_СтатусыРемонтаОтложено.РемонтОборудования = КАМИ_СтатусыРемонтаОснОтложено.РемонтОборудования)
-			И (КАМИ_СтатусыРемонтаОтложено.Период &lt; КАМИ_СтатусыРемонтаОснОтложено.Период)
-ГДЕ
-	КАМИ_РемонтОборудованияОбороты.Регистратор В(&amp;Регистратор)
-
-СГРУППИРОВАТЬ ПО
-	КАМИ_РемонтОборудованияОбороты.Регистратор,
-	КАМИ_СтатусыРемонтаОтложено.ДатаОкончанияРабот
-
-ОБЪЕДИНИТЬ ВСЕ
-
-ВЫБРАТЬ
-	КАМИ_РемонтОборудованияОбороты.Регистратор,
-	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ДатаОкончанияРабот,
-	МАКСИМУМ("ВРаботе"),
-	МИНИМУМ(КАМИ_СтатусыРемонтаОснВРаботе.Период)
-ИЗ
-	РегистрСведений.КАМИ_РемонтОборудованияРС КАК КАМИ_РемонтОборудованияОбороты
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта.СрезПоследних(, СтатусДокумента = ЗНАЧЕНИЕ(Перечисление.КАМИ_СтатусыСервисныхРабот.Вработе)) КАК КАМИ_СтатусыРемонтаСрезПоследнихВРаботе
-		ПО КАМИ_РемонтОборудованияОбороты.Регистратор = КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.РемонтОборудования
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КАМИ_СтатусыРемонта КАК КАМИ_СтатусыРемонтаОснВРаботе
-		ПО (КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.РемонтОборудования = КАМИ_СтатусыРемонтаОснВРаботе.РемонтОборудования)
-			И (КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.Период &lt; КАМИ_СтатусыРемонтаОснВРаботе.Период)
-ГДЕ
-	КАМИ_РемонтОборудованияОбороты.Регистратор В(&amp;Регистратор)
-
-СГРУППИРОВАТЬ ПО
-	КАМИ_РемонтОборудованияОбороты.Регистратор,
-	КАМИ_СтатусыРемонтаСрезПоследнихВРаботе.ДатаОкончанияРабот
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
-	СУММА(ВЫБОР
-			КОГДА ДиаграммаГанта.ТипДня = "Отложено"
-					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
-				ТОГДА 0
-			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
-						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-							ТОГДА &amp;ДатаСеанса
-						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-					КОНЕЦ, ДЕНЬ) &gt; 0
-				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
-							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-								ТОГДА &amp;ДатаСеанса
-							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-						КОНЕЦ, ДЕНЬ)
-			ИНАЧЕ 0
-		КОНЕЦ) КАК ДнейПросрочкиВРаботе,
-	СУММА(ВЫБОР
-			КОГДА ДиаграммаГанта.ТипДня = "ВРаботе"
-					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
-				ТОГДА 0
-			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
-						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-							ТОГДА &amp;ДатаСеанса
-						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-					КОНЕЦ, ДЕНЬ) &gt; 0
-				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
-							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-								ТОГДА &amp;ДатаСеанса
-							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-						КОНЕЦ, ДЕНЬ)
-			ИНАЧЕ 0
-		КОНЕЦ) КАК ДнейПросрочкиОтложено,
-	СУММА(ВЫБОР
-			КОГДА ДиаграммаГанта.ТипДня = "Отложено"
-					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
-				ТОГДА 0
-			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
-						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-							ТОГДА &amp;ДатаСеанса
-						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-					КОНЕЦ, ДЕНЬ) &gt; 0
-				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -2), ВЫБОР
-							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-								ТОГДА &amp;ДатаСеанса
-							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-						КОНЕЦ, ДЕНЬ)
-			ИНАЧЕ 0
-		КОНЕЦ) + СУММА(ВЫБОР
-			КОГДА ДиаграммаГанта.ТипДня = "ВРаботе"
-					ИЛИ ДиаграммаГанта.ДатаОкончанияРабот = ДАТАВРЕМЯ(1, 1, 1)
-				ТОГДА 0
-			КОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
-						КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-							ТОГДА &amp;ДатаСеанса
-						ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-					КОНЕЦ, ДЕНЬ) &gt; 0
-				ТОГДА РАЗНОСТЬДАТ(ДОБАВИТЬКДАТЕ(ДиаграммаГанта.ДатаОкончанияРабот, ДЕНЬ, -4), ВЫБОР
-							КОГДА ДиаграммаГанта.ПериодПредыдущегоСтатуса ЕСТЬ NULL
-								ТОГДА &amp;ДатаСеанса
-							ИНАЧЕ ДиаграммаГанта.ПериодПредыдущегоСтатуса
-						КОНЕЦ, ДЕНЬ)
-			ИНАЧЕ 0
-		КОНЕЦ) КАК ДнейПросрочки,
+	ЗНАЧЕНИЕ(Документ.КАМИ_РемонтОборудования.ПустаяСсылка) КАК Регистратор,
+	0 КАК ДнейПросрочки,
+	0 КАК Штраф,
 	0 КАК ДнейВСтатусе,
-	ДиаграммаГанта.ТипДня КАК ТипДня,
-	ДиаграммаГанта.Регистратор КАК Регистратор
-ИЗ
-	ДиаграммаГанта КАК ДиаграммаГанта
-
-СГРУППИРОВАТЬ ПО
-	ДиаграммаГанта.Регистратор,
-	ДиаграммаГанта.ТипДня</query>
+	"" КАК ТипДня,
+	ДАТАВРЕМЯ(1, 1, 1) КАК Период1,
+	ДАТАВРЕМЯ(1, 1, 1) КАК Период
+{ВЫБРАТЬ
+	Регистратор.*,
+	ДнейПросрочки,
+	Штраф,
+	ДнейВСтатусе,
+	ТипДня,
+	Период1,
+	Период}
+{ГДЕ
+	(ЗНАЧЕНИЕ(Документ.КАМИ_РемонтОборудования.ПустаяСсылка)).* КАК Регистратор,
+	("") КАК ТипДня}</query>
+		<autoFillFields>false</autoFillFields>
 	</dataSet>
 	<dataSetLink>
 		<sourceDataSet>ТЗДанныеДляОтчета</sourceDataSet>
@@ -832,18 +646,6 @@
 		<expression>Сумма(Штраф)</expression>
 	</totalField>
 	<totalField>
-		<dataPath>ДнейПросрочкиВРаботе</dataPath>
-		<expression>Сумма(ДнейПросрочкиВРаботе)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДнейПросрочкиОтложено</dataPath>
-		<expression>Сумма(ДнейПросрочкиОтложено)</expression>
-	</totalField>
-	<totalField>
-		<dataPath>ДнейПросрочки</dataPath>
-		<expression>Сумма(ДнейПросрочки)</expression>
-	</totalField>
-	<totalField>
 		<dataPath>СрокРемонта</dataPath>
 		<expression>Сумма(СрокРемонта)</expression>
 	</totalField>
@@ -877,24 +679,6 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ДатаСеанса</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Дата сеанса</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
-		<expression>ТекущаяДата()</expression>
-	</parameter>
-	<parameter>
 		<name>Регистратор</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -905,23 +689,6 @@
 		<value xsi:nil="true"/>
 		<useRestriction>true</useRestriction>
 		<valueListAllowed>true</valueListAllowed>
-	</parameter>
-	<parameter>
-		<name>Период</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
-		<useRestriction>true</useRestriction>
 	</parameter>
 	<parameter>
 		<name>ШтрафЗаДень</name>
@@ -978,6 +745,24 @@
 			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
 		</value>
 		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаСеанса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата сеанса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>ТекущаяДата()</expression>
 	</parameter>
 	<settingsVariant>
 		<dcsset:name>ГрафикРемонтаОборудования</dcsset:name>
@@ -1057,12 +842,6 @@
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Регистратор</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Период</dcscor:parameter>
-					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
-					<dcsset:viewMode>Normal</dcsset:viewMode>
 				</dcscor:item>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
@@ -1734,24 +1513,24 @@
 							<v8:Value xsi:type="xs:decimal">16</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">9569b04f-1817-4cf7-ad80-3d513b4c3433</v8:Key>
 							<v8:Value xsi:type="xs:decimal">1</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
 							<v8:Value xsi:type="xs:decimal">15</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
 							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
@@ -1762,12 +1541,12 @@
 							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
 							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
@@ -1810,19 +1589,19 @@
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
-							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
 							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
@@ -1830,7 +1609,7 @@
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
@@ -2537,24 +2316,24 @@
 							<v8:Value xsi:type="xs:decimal">16</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">9569b04f-1817-4cf7-ad80-3d513b4c3433</v8:Key>
 							<v8:Value xsi:type="xs:decimal">1</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">ceb54824-9253-4f60-9e50-4256a09ec405</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">2505edd4-667a-436a-8113-744443fbea80</v8:Key>
 							<v8:Value xsi:type="xs:decimal">15</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
-							<v8:Value xsi:type="xs:decimal">7</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">542407aa-25fd-4cfe-97d1-672336f7ef7e</v8:Key>
 							<v8:Value xsi:type="xs:decimal">13</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">7bbe4646-26c1-40a5-abfc-b84ad186c4c6</v8:Key>
+							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">a404d6a7-0dfc-4d18-b544-a87a432099cd</v8:Key>
@@ -2565,12 +2344,12 @@
 							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
-							<v8:Value xsi:type="xs:decimal">10</v8:Value>
-						</v8:pair>
-						<v8:pair>
 							<v8:Key xsi:type="xs:string">f09ee062-f7d7-4675-a3c9-88e1ccef4109</v8:Key>
 							<v8:Value xsi:type="xs:decimal">8</v8:Value>
+						</v8:pair>
+						<v8:pair>
+							<v8:Key xsi:type="xs:string">e686039d-f4ea-43bc-8b0e-882a0c66f32a</v8:Key>
+							<v8:Value xsi:type="xs:decimal">10</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">e282c715-29aa-49e4-a7c4-e486bc699479</v8:Key>
@@ -2613,19 +2392,19 @@
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
-							<v8:Value xsi:type="xs:decimal">2</v8:Value>
+							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
+							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
 							<v8:Key xsi:type="xs:string">b5fe795d-96ba-4d67-b0c4-50ac1e582b4f</v8:Key>
 							<v8:Value xsi:type="xs:decimal">6</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">2ab65f1c-a45d-40e0-883e-660227749651</v8:Key>
-							<v8:Value xsi:type="xs:decimal">6</v8:Value>
+							<v8:Key xsi:type="xs:string">5d8705fa-daa0-46f8-ae6d-6bb6c17b4b98</v8:Key>
+							<v8:Value xsi:type="xs:decimal">2</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
+							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
@@ -2633,7 +2412,7 @@
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
-							<v8:Key xsi:type="xs:string">fde7e5ae-0baa-4b2c-89d0-d5eb409773a1</v8:Key>
+							<v8:Key xsi:type="xs:string">dea55d19-1c99-4dac-b29f-77c6f89287cf</v8:Key>
 							<v8:Value xsi:type="xs:decimal">7</v8:Value>
 						</v8:pair>
 						<v8:pair>
